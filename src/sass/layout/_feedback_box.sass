@@ -1,0 +1,106 @@
+.feedback_box
+	padding-top: 170px
+	background-image: url(../img/feedback_bg.png)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	+breakpoint($laptop)
+		padding-top: 115px
+		+breakpoint($tablet)
+			padding-top: 60px
+
+	.feedback_box_holder
+		max-width: 1005px
+		margin: 0 auto
+		overflow: hidden
+		+breakpoint($tablet)
+			width: 100%
+		.feedback_form
+			float: right
+			width: 390px
+			background-color: #ffffff
+			padding: 38px 40px 66px 45px
+			+breakpoint($tablet)
+				width: 274px
+				margin: 0 auto
+				padding: 24px 40px 53px 40px
+				position: relative
+				left: -9px
+				float: none
+				+breakpoint($mobile)
+					left: 0
+					padding-bottom: 29px
+			h4
+				margin-bottom: 30px
+				font-family: 'ProximaNovaBold'
+				font-size: 30px
+				line-height: 34px
+				color: #1a1a1a
+				letter-spacing: 1px
+				+breakpoint($tablet)
+					font-size: 21px
+					line-height: 24px
+			.form-horizontal
+				.control-group
+					margin-bottom: 25px
+					+breakpoint($tablet)
+						margin-bottom: 24px
+					.controls
+						input
+							border-top: none
+							border-left: none
+							border-right: none
+							font-family: 'ProximaNovaRegular'
+							font-size: 16px
+							line-height: 18px
+							color: #a1a1a1
+							border-bottom: 1px solid #cccccc
+							outline: none
+							width: 100%
+							padding-bottom: 6px
+							padding-left: 5px
+							letter-spacing: 0.6px
+							+breakpoint($tablet)
+								font-size: 13px
+								line-height: 16px
+								padding-bottom: 4px
+						input::-webkit-input-placeholder
+							color: #a1a1a1 !important
+						input:-moz-placeholder
+							color: #a1a1a1 !important
+						input::-moz-placeholder
+							color: #a1a1a1 !important
+						input:-ms-input-placeholder 
+							color: #a1a1a1 !important
+				.btn:active
+					box-shadow: none
+				.btn
+					font-family: ProximaNovaSemibold
+					font-size: 13px
+					line-height: 17px
+					text-transform: uppercase
+					color: #f31131
+					margin-top: 63px
+					display: inline-block
+					letter-spacing: 0.4px
+					padding: 0
+					border: none
+					background-color: transparent
+					+breakpoint($laptop)
+						margin-top: 33px
+						+breakpoint($tablet)
+							margin-top: 15px
+							font-size: 11px
+							line-height: 15px
+							margin-top: 13px
+							letter-spacing: 0.6px
+					span
+						margin-left: 15px
+						position: relative
+						top: 1px
+						+breakpoint($tablet)
+							margin-left: 4px
+				a:hover
+					text-decoration: none
+					
+			

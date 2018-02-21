@@ -1,0 +1,154 @@
+@import "compass/reset"
+body
+	overflow-x: hidden
+p
+	font-family: 'ProximaNovaRegular'
+	font-size: 14px
+	line-height: 18px
+	color: #454851	
+h2
+	font-size: 44px
+	line-height: 48px
+	font-family: 'ProximaNovaBold'
+	color: #171d1c
+	text-align: center
+	letter-spacing: 2.4px
+
+
+	
+h6
+	margin-bottom: 12px
+	display: inline-block
+	a
+		font-family: 'ProximaNovaSemibold'
+		font-size: 21px
+		line-height: 25px
+		color: #454851	
+		display: inline-block
+	a:hover
+		text-decoration: underline
+		color: #f31131
+		
+h6:hover
+
+
+h5
+	display: inline-block
+	a
+		font-family: 'ProximaNovaSemibold'
+		font-size: 26px
+		line-height: 29px
+		color: #171d1c
+		display: inline-block
+	a:hover
+		text-decoration: underline
+		color: #f31131
+		
+.mobile-nav-button 
+	width: 35px
+	position: absolute
+	margin: 12px
+	right: 18px
+	top: 9px
+	z-index: 9999
+	cursor: pointer
+	width: 35px
+	height: 30px
+
+.mobile-nav-button .mobile-nav-button__line 
+	width: 100%
+	height: 2px
+	background: #0e0e0e
+	position: relative
+	transition: 1s ease
+	float: right
+	
+
+.mobile-nav-button .mobile-nav-button__line:nth-of-type(2) 
+	margin: 4.5px 0
+
+.mobile-nav-button .mobile-nav-button__line--1 
+	transform: rotate(45deg)
+	top: 9px
+	position: absolute
+	width: 78% !important
+	background-color: #ffffff
+	right: 0
+
+.mobile-nav-button .mobile-nav-button__line--2
+	display: none
+	width: 100% !important
+
+.mobile-nav-button .mobile-nav-button__line--3 
+	transform: rotate(135deg)
+	top: 9px
+	position: absolute
+	width: 78% !important
+	background-color: #ffffff
+	right: 0
+
+.line_1,
+.line_2
+	width: 30px !important
+.line_3
+	width: 20px!important
+
+.mobile-menu 
+	display: block
+	width: 100%
+	height: auto
+	background: #f31131
+	position: absolute
+	z-index: 9998
+	top: 43px
+	opacity: 0
+	left: 0
+	padding: 11px 15px 0 15px
+
+
+.mobile-menu ul
+	position: relative
+	top: 50%
+	transform: translateY(-50%)
+	padding: 0
+
+.mobile-menu ul li 
+	list-style: none
+
+.mobile-menu ul li a 
+
+	overflow: hidden
+	position: relative
+
+.mobile-menu ul li a:after
+	content: ''
+	background: #0e0e0e
+	width: 100%
+	height: 100%
+	position: absolute
+	right: -100%
+	top: 0
+	z-index: -1
+	transition: 0.4s ease
+
+
+.mobile-menu ul li a:hover 
+	color: #fff
+
+.mobile-menu ul li a:hover:after
+	right: 0
+
+.mobile-menu img 
+	position: absolute
+	width: 150px
+	display: block
+	left: 50%
+	top: 3rem
+	transform: translatex(-50%)
+	padding: 0
+	text-align: center
+
+.mobile-menu--open 
+	right: 0
+	opacity: 1
+	top: 0

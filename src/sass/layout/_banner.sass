@@ -1,0 +1,110 @@
+.banner
+	text-align: center
+	padding: 102px 10px 290px 10px
+	background-image: url(../img/banner_img.png)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	+breakpoint($laptop)
+		padding: 50px 0 29px
+		+breakpoint($tablet)
+			padding: 42px 15px 48px
+	
+	h1
+		font-family: 'ProximaNovaExtrabold'
+		font-size: 50px
+		line-height: 55px
+		color: #ffffff
+		text-transform: uppercase
+		margin-bottom: 27px
+		letter-spacing: 2.5px
+		+breakpoint($laptop)
+			font-size: 43px
+			line-height: 48px
+			+breakpoint($tablet)
+				font-size: 21px
+				line-height: 25px
+				margin-bottom: 12px
+				letter-spacing: 0.8px
+				+breakpoint($mobile)
+					font-size: 17px
+	p
+		color: #ffffff
+		font-family: 'ProximaNovaRegular'
+		font-size: 18px
+		line-height: 28px
+		letter-spacing: 0.6px
+		margin: 0 auto
+		margin-bottom: 22px
+		max-width: 787px
+
+		+breakpoint($tablet)
+			font-size: 13px
+			line-height: 25px
+			margin-bottom: 18px
+			letter-spacing: 1.6px
+			line-height: 19px
+			+breakpoint($mobile)
+				font-size: 12px
+				line-height: 17px
+
+	.main_btn:hover
+		box-shadow: none
+	.main_btn
+		letter-spacing: 0.4px
+		color: #ffffff
+		display: block
+		width: 328px
+		margin: 0 auto
+		font-family: 'ProximaNovaSemibold'
+		font-size: 13px
+		line-height: 18px
+		text-transform: uppercase
+		margin-bottom: 60px
+		padding: 17px 0 17px 30px
+		background-color: #f31131
+		border-radius: 53px
+		box-shadow: 0 0px 14px 1px #ffffff
+		text-align: left
+		+breakpoint($tablet)
+			font-size: 12px
+			line-height: 16px
+			width: 308px
+			padding: 17px 0 14px 30px
+			margin-bottom: 0
+			+breakpoint($mobile)
+				width: 265px
+				font-size: 10px
+				padding: 11px 0 11px 30px
+
+		img
+			margin-left: 12px
+			position: relative
+			top: 2px
+			+breakpoint($tablet)
+				margin-left: 8px
+				top: 1px
+				+breakpoint($mobile)
+					top: 2px
+					margin-left: 10px
+	a:hover
+		text-decoration: none
+	.icon_mouse_box
+		display: block
+		+breakpoint($tablet)
+			display: none
+			
+		a
+			position: relative
+		a:before
+			position: absolute
+			content: ' '
+			width: 1px
+			height: 80px
+			top: 36px
+			left: 49%
+			background-color: #ffffff
+
+
+		
+		

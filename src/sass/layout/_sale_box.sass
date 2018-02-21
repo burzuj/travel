@@ -1,0 +1,141 @@
+.sale_box
+	background-color: transparent
+	position: relative
+	margin-top: -78px
+	+breakpoint($tablet)
+		margin-top: 0
+
+	.sale_box_holder
+		width: 67%
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		background-color: #ffffff
+		box-shadow: 0px 3px 12px 0px #b1abab
+		overflow: hidden
+		position: relative
+		padding: 17px 0 18px
+		+breakpoint($laptop)
+			padding: 5px 0 5px
+			+breakpoint($tablet)
+				width: 100%
+				padding-left: 15px
+				padding-right: 15px
+				padding-bottom: 15px
+		.sale_box_foto
+			width: 31.2%
+			text-align: center
+			position: relative
+			+breakpoint($tablet)
+				display: none
+				
+			a
+				display: block
+				position: absolute
+				transform: translateY(-50%)
+				top: 50%
+				padding: 0 35px 0 50px
+				img
+					width: 100%
+		.popular_mob
+			display: none
+			+breakpoint($tablet)
+				display: block
+				padding: 9px 5px 8px 5px
+				letter-spacing: 0.6px
+				position: absolute
+				top: 11px
+				right: -155px
+				display: block
+				-webkit-transform: rotate(30deg)
+				transform: rotate(30deg)
+				background-color: #f31131
+				color: #fff
+				font-size: 10px
+				line-height: 14px
+				font-family: 'ProximaNovaBold'
+				text-align: center
+				width: 400px
+				text-transform: uppercase
+			
+		.popular
+			padding: 20px 5px 13px 5px
+			letter-spacing: 0.6px
+			position: absolute
+			top: 29px
+			right: -114px
+			display: block
+			-webkit-transform: rotate(30deg)
+			transform: rotate(30deg)
+			background-color: #f31131
+			color: #fff
+			font-size: 13px
+			line-height: 17px
+			font-family: 'ProximaNovaBold'
+			text-align: center
+			width: 400px
+			text-transform: uppercase
+			+breakpoint($tablet)
+				display: none
+				
+		.sale_box_text
+			padding: 14px 0 18px 0
+			width: 68.8%
+			position: relative
+			overflow: hidden	
+			+breakpoint($tablet)
+				width: 100%
+			h6
+				margin-bottom: 10px
+				display: inline-block
+				+breakpoint($tablet)
+					margin-bottom: 5px
+				a
+					font-family: 'ProximaNovaSemibold'
+					letter-spacing: 1px
+					font-size: 21px
+					line-height: 25px
+					color: #454851	
+					display: inline-block
+
+					+breakpoint($tablet)
+						font-size: 15px
+						line-height: 19px
+				a:hover
+					text-decoration: underline
+					color: #f31131
+				
+			p
+				font-family: 'ProximaNovaRegular'
+				font-size: 14px
+				line-height: 20px
+				color: #454851
+				width: 69%
+				letter-spacing: 0.5px
+				+breakpoint($tablet)
+					width: 90%	
+					font-size: 13px
+					line-height: 18px
+					letter-spacing: 0.4px
+					margin-bottom: 23px
+			.choise_mob
+				display: none
+				+breakpoint($tablet)
+					display: block
+					text-transform: uppercase
+					font-size: 11px
+					line-height: 15px
+					color: #f31131
+					font-family: 'ProximaNovaSemibold'
+					position: relative
+					left: -1px
+					letter-spacing: 0.3px
+				img
+					margin-left: 10px
+					position: relative
+					top: 1px
+				
+
+
+			

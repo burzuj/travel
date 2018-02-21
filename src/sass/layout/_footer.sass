@@ -1,0 +1,98 @@
+#footer
+	background-color: #000000
+	box-shadow: 1px 0 17px 4px #dedbdb
+	.header_holder
+		max-width: 1170px
+		margin: 0 auto
+		padding: 10px 15px 11px
+		overflow: hidden
+		+breakpoint($tablet)
+			padding: 11px 20px 10px 24px
+		.logo
+			width: 26.6%
+			float: left
+			+breakpoint ($laptop)
+				width: 29%
+				+breakpoint($tablet)
+					width: 54%
+			a
+				font-family: 'Oswald-Bold', sans-serif
+				font-size: 16px
+				line-height: 18px
+				color: #ffffff
+				letter-spacing: 0.2px
+				p
+					font-family: 'ProximaNovaThin'
+					display: block
+					font-size: 14px
+					letter-spacing: 0px
+					margin-top: 2px
+					color: #ffffff
+					@media screen and (max-width: 1150px)
+						font-size: 13px
+						+breakpoint($laptop)
+							font-size: 11px
+							+breakpoint($tablet)
+								font-size: 13px
+								letter-spacing: 0.5px
+					span
+						+breakpoint($tablet)
+							display: none
+						
+			a:hover
+				text-decoration: none
+				color: #f31131
+
+		.nav_holder
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			width: 73.4%
+			+breakpoint ($laptop)
+				width: 71%
+				+breakpoint ($tablet)
+					width: 46%
+					float: right
+					display: block
+					
+			.nav
+				padding-top: 1px
+				width: 76%
+				display: flex
+				justify-content: space-between
+				+breakpoint($laptop)
+					width: 75%
+					+breakpoint($tablet)
+						display: none
+						
+				li
+					display: inline-block
+					a:hover
+						background-color: transparent
+						color: #f31131
+					a
+						text-transform: uppercase
+						font-family: 'ProximaNovaRegular'
+						font-size: 13px
+						line-height: 18px
+						color: #ffffff
+						letter-spacing: 0.4px
+						padding: 10px 0
+						+breakpoint($laptop)
+							font-size: 11px
+		
+		.phone_box
+			padding-top: 10px
+			letter-spacing: 0.4px
+			+breakpoint($tablet)
+				text-align: right
+			a
+				font-family: 'ProximaNovaSemibold'
+				font-size: 16px
+				line-height: 20px
+				color: #ffffff
+				+breakpoint($laptop)
+					font-size: 14px
+			a:hover
+				text-decoration: none
+				

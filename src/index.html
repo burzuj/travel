@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/vendor.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        //= template/header.html
+        <main id = 'main'>
+            <section class = 'banner'>
+                <h1>Организация путешествий</h1>
+                <p>Путешествуйте вместе с нами и открывайте для себя новые направления по необычным маршрутам</p>
+                <a href = '#' class = 'main_btn'>Перейти к выбору направления <img src="img/arrow.png" alt = ''></a>
+                <div class = 'icon_mouse_box'>
+                    <a href='#sale'><img src="img/mouse.png" alt = ''></a>
+                </div>
+            </section>
+
+            //= template/sale_box.html
+
+            <article class = 'travel_box'>
+                //= template/popular_places_box.html
+            </article>
+
+            //= template/why_us.html
+            //= template/feedback_box.html
+        </main>
+        //= template/footer.html
+    </div>
+        
+
+    <script src="libs/vendor.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

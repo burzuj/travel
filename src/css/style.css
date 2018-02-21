@@ -1,0 +1,360 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+body { overflow-x: hidden; }
+
+p { font-family: "ProximaNovaRegular"; font-size: 14px; line-height: 18px; color: #454851; }
+
+h2 { font-size: 44px; line-height: 48px; font-family: "ProximaNovaBold"; color: #171d1c; text-align: center; letter-spacing: 2.4px; }
+
+h6 { margin-bottom: 12px; display: inline-block; }
+h6 a { font-family: "ProximaNovaSemibold"; font-size: 21px; line-height: 25px; color: #454851; display: inline-block; }
+h6 a:hover { text-decoration: underline; color: #f31131; }
+
+h5 { display: inline-block; }
+h5 a { font-family: "ProximaNovaSemibold"; font-size: 26px; line-height: 29px; color: #171d1c; display: inline-block; }
+h5 a:hover { text-decoration: underline; color: #f31131; }
+
+.mobile-nav-button { width: 35px; position: absolute; margin: 12px; right: 18px; top: 9px; z-index: 9999; cursor: pointer; width: 35px; height: 30px; }
+
+.mobile-nav-button .mobile-nav-button__line { width: 100%; height: 2px; background: #0e0e0e; position: relative; transition: 1s ease; float: right; }
+
+.mobile-nav-button .mobile-nav-button__line:nth-of-type(2) { margin: 4.5px 0; }
+
+.mobile-nav-button .mobile-nav-button__line--1 { transform: rotate(45deg); top: 9px; position: absolute; width: 78% !important; background-color: #ffffff; right: 0; }
+
+.mobile-nav-button .mobile-nav-button__line--2 { display: none; width: 100% !important; }
+
+.mobile-nav-button .mobile-nav-button__line--3 { transform: rotate(135deg); top: 9px; position: absolute; width: 78% !important; background-color: #ffffff; right: 0; }
+
+.line_1, .line_2 { width: 30px !important; }
+
+.line_3 { width: 20px !important; }
+
+.mobile-menu { display: block; width: 100%; height: auto; background: #f31131; position: absolute; z-index: 9998; top: 43px; opacity: 0; left: 0; padding: 11px 15px 0 15px; }
+
+.mobile-menu ul { position: relative; top: 50%; transform: translateY(-50%); padding: 0; }
+
+.mobile-menu ul li { list-style: none; }
+
+.mobile-menu ul li a { overflow: hidden; position: relative; }
+
+.mobile-menu ul li a:after { content: ""; background: #0e0e0e; width: 100%; height: 100%; position: absolute; right: -100%; top: 0; z-index: -1; transition: 0.4s ease; }
+
+.mobile-menu ul li a:hover { color: #fff; }
+
+.mobile-menu ul li a:hover:after { right: 0; }
+
+.mobile-menu img { position: absolute; width: 150px; display: block; left: 50%; top: 3rem; transform: translatex(-50%); padding: 0; text-align: center; }
+
+.mobile-menu--open { right: 0; opacity: 1; top: 0; }
+
+@font-face { font-family: "ProximaNovaBold"; src: url('../fonts/Proxima Nova Bold.otf?1470593789') format('opentype'); }
+@font-face { font-family: "ProximaNovaThin"; src: url('../fonts/Proxima Nova Thin.otf?1470593897') format('opentype'); }
+@font-face { font-family: "ProximaNovaRegular"; src: url('../fonts/Proxima Nova Regular.otf?1470593881') format('opentype'); }
+@font-face { font-family: "ProximaNovaSemibold"; src: url('../fonts/Proxima Nova Semibold.otf?1470593888') format('opentype'); }
+@font-face { font-family: "ProximaNovaExtrabold"; src: url('../fonts/Proxima Nova Extrabold.otf?1470593919') format('opentype'); }
+@font-face { font-family: "Oswald-Bold"; src: url('../fonts/Oswald-Bold.ttf?1513298800') format('truetype'); }
+#header { background-color: #ffffff; box-shadow: 1px 0 17px 4px #dedbdb; }
+#header .header_holder { max-width: 1170px; margin: 0 auto; padding: 10px 15px 11px; overflow: hidden; }
+@media screen and (max-width: 767px) { #header .header_holder { padding: 11px 20px 10px 24px; background-color: #ffffff; } }
+#header .header_holder .logo { width: 26.6%; float: left; }
+@media screen and (max-width: 992px) { #header .header_holder .logo { width: 29%; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { #header .header_holder .logo { width: 54%; } }
+
+@media screen and (max-width: 992px) and (max-width: 767px) and (max-width: 374px) { #header .header_holder .logo { width: 62%; } }
+
+#header .header_holder .logo a { font-family: "Oswald-Bold", sans-serif; font-size: 16px; line-height: 18px; color: #000000; letter-spacing: 0.2px; }
+#header .header_holder .logo a p { font-family: "ProximaNovaThin"; display: block; font-size: 14px; letter-spacing: 0px; margin-top: 2px; }
+@media screen and (max-width: 1150px) { #header .header_holder .logo a p { font-size: 13px; } }
+@media screen and (max-width: 1150px) and (max-width: 992px) { #header .header_holder .logo a p { font-size: 11px; } }
+
+@media screen and (max-width: 1150px) and (max-width: 992px) and (max-width: 767px) { #header .header_holder .logo a p { font-size: 13px; letter-spacing: 0.5px; } }
+
+@media screen and (max-width: 767px) { #header .header_holder .logo a p span { display: none; } }
+#header .header_holder .logo a:hover { text-decoration: none; color: #f31131; }
+#header .header_holder .nav_holder, #header .header_holder .nav_holder_mob { display: flex; justify-content: space-between; flex-wrap: wrap; width: 73.4%; }
+@media screen and (max-width: 992px) { #header .header_holder .nav_holder, #header .header_holder .nav_holder_mob { width: 71%; } }
+#header .header_holder .nav_holder .nav, #header .header_holder .nav_holder_mob .nav { padding-top: 1px; width: 76%; display: flex; justify-content: space-between; }
+@media screen and (max-width: 992px) { #header .header_holder .nav_holder .nav, #header .header_holder .nav_holder_mob .nav { width: 75%; } }
+#header .header_holder .nav_holder .nav li, #header .header_holder .nav_holder_mob .nav li { display: inline-block; }
+#header .header_holder .nav_holder .nav li a:hover, #header .header_holder .nav_holder_mob .nav li a:hover { background-color: transparent; color: #f31131; }
+#header .header_holder .nav_holder .nav li a, #header .header_holder .nav_holder_mob .nav li a { text-transform: uppercase; font-family: "ProximaNovaRegular"; font-size: 13px; line-height: 18px; color: #404040; letter-spacing: 0.4px; padding: 10px 0 0 0; }
+@media screen and (max-width: 992px) { #header .header_holder .nav_holder .nav li a, #header .header_holder .nav_holder_mob .nav li a { font-size: 11px; } }
+@media screen and (max-width: 767px) { #header .header_holder .nav_holder { display: none; } }
+#header .header_holder .nav_holder_mob { display: none; }
+@media screen and (max-width: 767px) { #header .header_holder .nav_holder_mob { display: block; width: 100%; } }
+#header .header_holder .nav_holder_mob .nav { width: 100%; }
+#header .header_holder .nav_holder_mob .nav li a { color: #ffffff; }
+@media screen and (max-width: 374px) { #header .header_holder .nav_holder_mob .nav li a { font-size: 9px; } }
+#header .header_holder .nav_holder_mob .nav li a:hover { background-color: #f31131; border: none; }
+@media screen and (max-width: 767px) { #header .header_holder .nav_holder_mob .nav li a:hover { color: #ffffff; } }
+@media screen and (max-width: 767px) { #header .header_holder .nav_holder_mob .nav li a:focus { color: #ffffff; outline: none; } }
+#header .header_holder .nav_holder_mob .phone_box a { color: #ffffff; margin-bottom: 25px; display: block; }
+@media screen and (max-width: 767px) { #header .header_holder .nav_holder_mob .phone_box a { font-size: 16px; padding-left: 2%; } }
+#header .header_holder .phone_box { padding-top: 10px; letter-spacing: 0.4px; }
+#header .header_holder .phone_box a { font-family: "ProximaNovaSemibold"; font-size: 16px; line-height: 20px; color: #000000; }
+@media screen and (max-width: 992px) { #header .header_holder .phone_box a { font-size: 14px; } }
+#header .header_holder .phone_box a:hover { text-decoration: none; }
+
+.banner { text-align: center; padding: 102px 10px 290px 10px; background-image: url(../img/banner_img.png); background-size: cover; background-position: center; background-repeat: no-repeat; }
+@media screen and (max-width: 992px) { .banner { padding: 50px 0 29px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .banner { padding: 42px 15px 48px; } }
+
+.banner h1 { font-family: "ProximaNovaExtrabold"; font-size: 50px; line-height: 55px; color: #ffffff; text-transform: uppercase; margin-bottom: 27px; letter-spacing: 2.5px; }
+@media screen and (max-width: 992px) { .banner h1 { font-size: 43px; line-height: 48px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .banner h1 { font-size: 21px; line-height: 25px; margin-bottom: 12px; letter-spacing: 0.8px; } }
+
+@media screen and (max-width: 992px) and (max-width: 767px) and (max-width: 374px) { .banner h1 { font-size: 17px; } }
+
+.banner p { color: #ffffff; font-family: "ProximaNovaRegular"; font-size: 18px; line-height: 28px; letter-spacing: 0.6px; margin: 0 auto; margin-bottom: 22px; max-width: 787px; }
+@media screen and (max-width: 767px) { .banner p { font-size: 13px; line-height: 25px; margin-bottom: 18px; letter-spacing: 1.6px; line-height: 19px; } }
+@media screen and (max-width: 767px) and (max-width: 374px) { .banner p { font-size: 12px; line-height: 17px; } }
+
+.banner .main_btn:hover { box-shadow: none; }
+.banner .main_btn { letter-spacing: 0.4px; color: #ffffff; display: block; width: 328px; margin: 0 auto; font-family: "ProximaNovaSemibold"; font-size: 13px; line-height: 18px; text-transform: uppercase; margin-bottom: 60px; padding: 17px 0 17px 30px; background-color: #f31131; border-radius: 53px; box-shadow: 0 0px 14px 1px #ffffff; text-align: left; }
+@media screen and (max-width: 767px) { .banner .main_btn { font-size: 12px; line-height: 16px; width: 308px; padding: 17px 0 14px 30px; margin-bottom: 0; } }
+@media screen and (max-width: 767px) and (max-width: 374px) { .banner .main_btn { width: 265px; font-size: 10px; padding: 11px 0 11px 30px; } }
+
+.banner .main_btn img { margin-left: 12px; position: relative; top: 2px; }
+@media screen and (max-width: 767px) { .banner .main_btn img { margin-left: 8px; top: 1px; } }
+@media screen and (max-width: 767px) and (max-width: 374px) { .banner .main_btn img { top: 2px; margin-left: 10px; } }
+
+.banner a:hover { text-decoration: none; }
+.banner .icon_mouse_box { display: block; }
+@media screen and (max-width: 767px) { .banner .icon_mouse_box { display: none; } }
+.banner .icon_mouse_box a { position: relative; }
+.banner .icon_mouse_box a:before { position: absolute; content: " "; width: 1px; height: 80px; top: 36px; left: 49%; background-color: #ffffff; }
+
+.sale_box { background-color: transparent; position: relative; margin-top: -78px; }
+@media screen and (max-width: 767px) { .sale_box { margin-top: 0; } }
+.sale_box .sale_box_holder { width: 67%; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; background-color: #ffffff; box-shadow: 0px 3px 12px 0px #b1abab; overflow: hidden; position: relative; padding: 17px 0 18px; }
+@media screen and (max-width: 992px) { .sale_box .sale_box_holder { padding: 5px 0 5px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .sale_box .sale_box_holder { width: 100%; padding-left: 15px; padding-right: 15px; padding-bottom: 15px; } }
+
+.sale_box .sale_box_holder .sale_box_foto { width: 31.2%; text-align: center; position: relative; }
+@media screen and (max-width: 767px) { .sale_box .sale_box_holder .sale_box_foto { display: none; } }
+.sale_box .sale_box_holder .sale_box_foto a { display: block; position: absolute; transform: translateY(-50%); top: 50%; padding: 0 35px 0 50px; }
+.sale_box .sale_box_holder .sale_box_foto a img { width: 100%; }
+.sale_box .sale_box_holder .popular_mob { display: none; }
+@media screen and (max-width: 767px) { .sale_box .sale_box_holder .popular_mob { display: block; padding: 9px 5px 8px 5px; letter-spacing: 0.6px; position: absolute; top: 11px; right: -155px; display: block; -webkit-transform: rotate(30deg); transform: rotate(30deg); background-color: #f31131; color: #fff; font-size: 10px; line-height: 14px; font-family: "ProximaNovaBold"; text-align: center; width: 400px; text-transform: uppercase; } }
+.sale_box .sale_box_holder .popular { padding: 20px 5px 13px 5px; letter-spacing: 0.6px; position: absolute; top: 29px; right: -114px; display: block; -webkit-transform: rotate(30deg); transform: rotate(30deg); background-color: #f31131; color: #fff; font-size: 13px; line-height: 17px; font-family: "ProximaNovaBold"; text-align: center; width: 400px; text-transform: uppercase; }
+@media screen and (max-width: 767px) { .sale_box .sale_box_holder .popular { display: none; } }
+.sale_box .sale_box_holder .sale_box_text { padding: 14px 0 18px 0; width: 68.8%; position: relative; overflow: hidden; }
+@media screen and (max-width: 767px) { .sale_box .sale_box_holder .sale_box_text { width: 100%; } }
+.sale_box .sale_box_holder .sale_box_text h6 { margin-bottom: 10px; display: inline-block; }
+@media screen and (max-width: 767px) { .sale_box .sale_box_holder .sale_box_text h6 { margin-bottom: 5px; } }
+.sale_box .sale_box_holder .sale_box_text h6 a { font-family: "ProximaNovaSemibold"; letter-spacing: 1px; font-size: 21px; line-height: 25px; color: #454851; display: inline-block; }
+@media screen and (max-width: 767px) { .sale_box .sale_box_holder .sale_box_text h6 a { font-size: 15px; line-height: 19px; } }
+.sale_box .sale_box_holder .sale_box_text h6 a:hover { text-decoration: underline; color: #f31131; }
+.sale_box .sale_box_holder .sale_box_text p { font-family: "ProximaNovaRegular"; font-size: 14px; line-height: 20px; color: #454851; width: 69%; letter-spacing: 0.5px; }
+@media screen and (max-width: 767px) { .sale_box .sale_box_holder .sale_box_text p { width: 90%; font-size: 13px; line-height: 18px; letter-spacing: 0.4px; margin-bottom: 23px; } }
+.sale_box .sale_box_holder .sale_box_text .choise_mob { display: none; }
+@media screen and (max-width: 767px) { .sale_box .sale_box_holder .sale_box_text .choise_mob { display: block; text-transform: uppercase; font-size: 11px; line-height: 15px; color: #f31131; font-family: "ProximaNovaSemibold"; position: relative; left: -1px; letter-spacing: 0.3px; } }
+.sale_box .sale_box_holder .sale_box_text .choise_mob img { margin-left: 10px; position: relative; top: 1px; }
+
+.why_us_box .why_us_box_holder { max-width: 1170px; margin: 0 auto; padding: 0 0 82px; }
+@media screen and (max-width: 992px) { .why_us_box .why_us_box_holder { padding-bottom: 65px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .why_us_box .why_us_box_holder { padding-bottom: 22px; } }
+
+.why_us_box .why_us_box_holder h2 { margin-bottom: 52px; }
+@media screen and (max-width: 992px) { .why_us_box .why_us_box_holder h2 { font-size: 36px; line-height: 40px; margin-bottom: 45px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .why_us_box .why_us_box_holder h2 { font-size: 21px; line-height: 26px; margin-bottom: 25px; letter-spacing: 1px; } }
+
+.why_us_box .why_us_box_holder .why_us_section { display: flex; justify-content: space-around; flex-wrap: wrap; }
+.why_us_box .why_us_box_holder .why_us_section .why_us_item { width: 32%; text-align: center; }
+@media screen and (max-width: 767px) { .why_us_box .why_us_box_holder .why_us_section .why_us_item { width: 100%; margin-bottom: 13px; } }
+.why_us_box .why_us_box_holder .why_us_section .why_us_item img { margin: 0 auto; margin-bottom: 22px; display: block; }
+@media screen and (max-width: 767px) { .why_us_box .why_us_box_holder .why_us_section .why_us_item img { width: 84px; height: 84px; margin-bottom: 15px; } }
+.why_us_box .why_us_box_holder .why_us_section .why_us_item h6 { margin-bottom: 9px; font-family: "ProximaNovaSemibold"; font-size: 22px; line-height: 28px; color: #171d1c; letter-spacing: 0.8px; }
+@media screen and (max-width: 767px) { .why_us_box .why_us_box_holder .why_us_section .why_us_item h6 { font-size: 18px; line-height: 23px; margin-bottom: 11px; } }
+@media screen and (max-width: 767px) and (max-width: 374px) { .why_us_box .why_us_box_holder .why_us_section .why_us_item h6 { font-size: 16px; } }
+
+.why_us_box .why_us_box_holder .why_us_section .why_us_item p { font-size: 16px; margin: 0 auto; letter-spacing: 0.6px; line-height: 22px; }
+@media screen and (max-width: 767px) { .why_us_box .why_us_box_holder .why_us_section .why_us_item p { font-size: 13px; line-height: 17px; letter-spacing: 0.4px; margin: 0 auto; width: 86%; } }
+
+.travel_box { padding-top: 80px; padding-bottom: 65px; }
+@media screen and (max-width: 992px) { .travel_box { padding-top: 43px; padding-bottom: 24px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .travel_box { padding-top: 37px; padding-bottom: 17px; } }
+
+.travel_box .popular_places_box .popular_places_box_holder { max-width: 1170px; margin: 0 auto; }
+.travel_box .popular_places_box .popular_places_box_holder h2 { margin-bottom: 59px; letter-spacing: 2.4px; }
+@media screen and (max-width: 992px) { .travel_box .popular_places_box .popular_places_box_holder h2 { font-size: 36px; line-height: 40px; margin-bottom: 45px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .travel_box .popular_places_box .popular_places_box_holder h2 { font-size: 21px; line-height: 25px; letter-spacing: 1.3px; margin-bottom: 25px; } }
+
+.travel_box .popular_places_box .popular_places_box_holder .info_box { display: flex; flex-wrap: wrap; }
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section { width: 50%; display: flex; flex-wrap: wrap; justify-content: space-around; margin-bottom: 27px; }
+@media screen and (max-width: 767px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section { width: 100%; margin-bottom: 16px; } }
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox { padding: 0 15px; width: 52.9%; flex-direction: column; justify-content: center; height: 100%; }
+@media screen and (max-width: 767px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox { width: 49.9%; } }
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox .line1 img { width: 100%; display: block; }
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox .line2 { display: flex; }
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox .line2 img { width: 100%; height: 70px; display: block; }
+@media screen and (max-width: 767px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox .line2 img { height: auto; } }
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox .line2 a { width: 33.33%; }
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box { padding: 29px 15px 26px 3px; width: 47.1%; }
+@media screen and (max-width: 992px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box { padding: 5px 5px 5px 3px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box { width: 50.1%; padding-top: 15px; } }
+
+@media screen and (max-width: 992px) and (max-width: 767px) and (max-width: 374px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box { padding-top: 4px; } }
+
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box h5 { margin-bottom: 29px; }
+@media screen and (max-width: 992px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box h5 { margin-bottom: 12px; } }
+@media screen and (max-width: 992px) and (max-width: 374px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box h5 { margin-bottom: 9px; } }
+
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box p { margin-bottom: 29px; letter-spacing: 1.7px; line-height: 22px; }
+@media screen and (max-width: 992px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box p { font-size: 13px; line-height: 18px; margin-bottom: 13px; letter-spacing: 0.5px; } }
+@media screen and (max-width: 992px) and (max-width: 374px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box p { font-size: 12px; line-height: 16px; } }
+
+@media screen and (max-width: 767px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box p span { display: none; } }
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box a { font-family: "ProximaNovaSemibold"; font-size: 26px; line-height: 30px; letter-spacing: 1px; }
+@media screen and (max-width: 767px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box a { font-size: 15px; line-height: 19px; } }
+@media screen and (max-width: 767px) and (max-width: 374px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box a { font-size: 14px; line-height: 16px; } }
+
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice { color: #f31131; font-size: 13px; line-height: 17px; text-transform: uppercase; letter-spacing: 0.5px; }
+@media screen and (max-width: 992px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice { font-size: 11px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice { letter-spacing: 0.3px; } }
+
+@media screen and (max-width: 992px) and (max-width: 767px) and (max-width: 374px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice { font-size: 10px; } }
+
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice span { margin-left: 7px; position: relative; top: 1px; }
+@media screen and (max-width: 992px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice span { margin-left: 8px; } }
+@media screen and (max-width: 992px) and (max-width: 374px) { .travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice span { margin-left: 5px; } }
+
+.travel_box .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice:hover { text-decoration: none; }
+
+.breadcrumbs { text-transform: uppercase; margin-bottom: 30px; padding: 0 15px; }
+@media screen and (max-width: 992px) { .breadcrumbs { margin-bottom: 8px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .breadcrumbs { display: none; } }
+
+.breadcrumbs li { display: inline-block; font-size: 13px; line-height: 16px; font-family: "ProximaNovaRegular"; margin-right: 2px; }
+.breadcrumbs li a { color: #000000; }
+.breadcrumbs .active { color: #f31131; }
+
+.sample_page .popular_places_box .popular_places_box_holder { max-width: 1170px; margin: 0 auto; padding-top: 20px; padding-bottom: 78px; }
+@media screen and (max-width: 992px) { .sample_page .popular_places_box .popular_places_box_holder { padding-bottom: 45px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .sample_page .popular_places_box .popular_places_box_holder { padding-top: 28px; padding-bottom: 12px; } }
+
+.sample_page .popular_places_box .popular_places_box_holder h2 { margin-bottom: 60px; letter-spacing: 2.4px; }
+@media screen and (max-width: 992px) { .sample_page .popular_places_box .popular_places_box_holder h2 { font-size: 36px; line-height: 40px; margin-bottom: 45px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .sample_page .popular_places_box .popular_places_box_holder h2 { font-size: 21px; line-height: 25px; letter-spacing: 1.3px; margin-bottom: 24px; } }
+
+.sample_page .popular_places_box .popular_places_box_holder .info_box { display: flex; flex-wrap: wrap; }
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section { width: 50%; display: flex; flex-wrap: wrap; justify-content: space-around; margin-bottom: 69px; }
+@media screen and (max-width: 992px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section { margin-bottom: 27px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section { width: 100%; } }
+
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox { padding: 0 15px; width: 52.9%; flex-direction: column; justify-content: center; height: 100%; }
+@media screen and (max-width: 767px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox { width: 49.9%; } }
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox .line1 img { width: 100%; display: block; }
+@media screen and (max-width: 480px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox .line1 img { height: 159px; } }
+@media screen and (max-width: 480px) and (max-width: 374px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox .line1 img { height: auto; } }
+
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox .line2 { display: flex; }
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox .line2 img { width: 100%; height: 70px; display: block; }
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .fotobox .line2 a { width: 33.33%; }
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box { padding: 13px 32px 26px 3px; width: 47.1%; }
+@media screen and (max-width: 992px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box { padding: 5px 5px 5px 3px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box { width: 50.1%; padding-top: 13px; } }
+
+@media screen and (max-width: 992px) and (max-width: 767px) and (max-width: 374px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box { padding-top: 4px; } }
+
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box h5 { margin-bottom: 29px; }
+@media screen and (max-width: 992px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box h5 { margin-bottom: 10px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box h5 { margin-bottom: 13px; } }
+
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box p { margin-bottom: 29px; letter-spacing: 1.7px; line-height: 22px; }
+@media screen and (max-width: 992px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box p { margin-bottom: 15px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box p { font-size: 13px; line-height: 18px; letter-spacing: 0.5px; margin-bottom: 12px; } }
+
+@media screen and (max-width: 992px) and (max-width: 767px) and (max-width: 374px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box p { font-size: 12px; line-height: 16px; } }
+
+@media screen and (max-width: 767px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box p span { display: none; } }
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box a { font-family: "ProximaNovaSemibold"; font-size: 26px; line-height: 30px; letter-spacing: 1px; }
+@media only screen and (max-width: 1085px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box a { font-size: 23px; } }
+@media only screen and (max-width: 1085px) and (max-width: 767px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box a { font-size: 15px; line-height: 19px; letter-spacing: 0.5px; } }
+
+@media only screen and (max-width: 1085px) and (max-width: 767px) and (max-width: 374px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box a { font-size: 14px; line-height: 16px; } }
+
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice { color: #f31131; font-size: 13px; line-height: 17px; text-transform: uppercase; letter-spacing: 0.5px; }
+@media screen and (max-width: 767px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice { font-size: 11px; letter-spacing: 0.3px; } }
+@media screen and (max-width: 767px) and (max-width: 374px) { .sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice { font-size: 10px; } }
+
+.sample_page .popular_places_box .popular_places_box_holder .info_box .info_section .text_box .choice span { margin-left: 7px; position: relative; top: 1px; }
+
+.feedback_box { padding-top: 170px; background-image: url(../img/feedback_bg.png); background-size: cover; background-position: center; background-repeat: no-repeat; }
+@media screen and (max-width: 992px) { .feedback_box { padding-top: 115px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .feedback_box { padding-top: 60px; } }
+
+.feedback_box .feedback_box_holder { max-width: 1005px; margin: 0 auto; overflow: hidden; }
+@media screen and (max-width: 767px) { .feedback_box .feedback_box_holder { width: 100%; } }
+.feedback_box .feedback_box_holder .feedback_form { float: right; width: 390px; background-color: #ffffff; padding: 38px 40px 66px 45px; }
+@media screen and (max-width: 767px) { .feedback_box .feedback_box_holder .feedback_form { width: 274px; margin: 0 auto; padding: 24px 40px 53px 40px; position: relative; left: -9px; float: none; } }
+@media screen and (max-width: 767px) and (max-width: 374px) { .feedback_box .feedback_box_holder .feedback_form { left: 0; padding-bottom: 29px; } }
+
+.feedback_box .feedback_box_holder .feedback_form h4 { margin-bottom: 30px; font-family: "ProximaNovaBold"; font-size: 30px; line-height: 34px; color: #1a1a1a; letter-spacing: 1px; }
+@media screen and (max-width: 767px) { .feedback_box .feedback_box_holder .feedback_form h4 { font-size: 21px; line-height: 24px; } }
+.feedback_box .feedback_box_holder .feedback_form .form-horizontal .control-group { margin-bottom: 25px; }
+@media screen and (max-width: 767px) { .feedback_box .feedback_box_holder .feedback_form .form-horizontal .control-group { margin-bottom: 24px; } }
+.feedback_box .feedback_box_holder .feedback_form .form-horizontal .control-group .controls input { border-top: none; border-left: none; border-right: none; font-family: "ProximaNovaRegular"; font-size: 16px; line-height: 18px; color: #a1a1a1; border-bottom: 1px solid #cccccc; outline: none; width: 100%; padding-bottom: 6px; padding-left: 5px; letter-spacing: 0.6px; }
+@media screen and (max-width: 767px) { .feedback_box .feedback_box_holder .feedback_form .form-horizontal .control-group .controls input { font-size: 13px; line-height: 16px; padding-bottom: 4px; } }
+.feedback_box .feedback_box_holder .feedback_form .form-horizontal .control-group .controls input::-webkit-input-placeholder { color: #a1a1a1 !important; }
+.feedback_box .feedback_box_holder .feedback_form .form-horizontal .control-group .controls input:-moz-placeholder { color: #a1a1a1 !important; }
+.feedback_box .feedback_box_holder .feedback_form .form-horizontal .control-group .controls input::-moz-placeholder { color: #a1a1a1 !important; }
+.feedback_box .feedback_box_holder .feedback_form .form-horizontal .control-group .controls input:-ms-input-placeholder { color: #a1a1a1 !important; }
+.feedback_box .feedback_box_holder .feedback_form .form-horizontal .btn:active { box-shadow: none; }
+.feedback_box .feedback_box_holder .feedback_form .form-horizontal .btn { font-family: ProximaNovaSemibold; font-size: 13px; line-height: 17px; text-transform: uppercase; color: #f31131; margin-top: 63px; display: inline-block; letter-spacing: 0.4px; padding: 0; border: none; background-color: transparent; }
+@media screen and (max-width: 992px) { .feedback_box .feedback_box_holder .feedback_form .form-horizontal .btn { margin-top: 33px; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { .feedback_box .feedback_box_holder .feedback_form .form-horizontal .btn { margin-top: 15px; font-size: 11px; line-height: 15px; margin-top: 13px; letter-spacing: 0.6px; } }
+
+.feedback_box .feedback_box_holder .feedback_form .form-horizontal .btn span { margin-left: 15px; position: relative; top: 1px; }
+@media screen and (max-width: 767px) { .feedback_box .feedback_box_holder .feedback_form .form-horizontal .btn span { margin-left: 4px; } }
+.feedback_box .feedback_box_holder .feedback_form .form-horizontal a:hover { text-decoration: none; }
+
+#footer { background-color: #000000; box-shadow: 1px 0 17px 4px #dedbdb; }
+#footer .header_holder { max-width: 1170px; margin: 0 auto; padding: 10px 15px 11px; overflow: hidden; }
+@media screen and (max-width: 767px) { #footer .header_holder { padding: 11px 20px 10px 24px; } }
+#footer .header_holder .logo { width: 26.6%; float: left; }
+@media screen and (max-width: 992px) { #footer .header_holder .logo { width: 29%; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { #footer .header_holder .logo { width: 54%; } }
+
+#footer .header_holder .logo a { font-family: "Oswald-Bold", sans-serif; font-size: 16px; line-height: 18px; color: #ffffff; letter-spacing: 0.2px; }
+#footer .header_holder .logo a p { font-family: "ProximaNovaThin"; display: block; font-size: 14px; letter-spacing: 0px; margin-top: 2px; color: #ffffff; }
+@media screen and (max-width: 1150px) { #footer .header_holder .logo a p { font-size: 13px; } }
+@media screen and (max-width: 1150px) and (max-width: 992px) { #footer .header_holder .logo a p { font-size: 11px; } }
+
+@media screen and (max-width: 1150px) and (max-width: 992px) and (max-width: 767px) { #footer .header_holder .logo a p { font-size: 13px; letter-spacing: 0.5px; } }
+
+@media screen and (max-width: 767px) { #footer .header_holder .logo a p span { display: none; } }
+#footer .header_holder .logo a:hover { text-decoration: none; color: #f31131; }
+#footer .header_holder .nav_holder { display: flex; justify-content: space-between; flex-wrap: wrap; width: 73.4%; }
+@media screen and (max-width: 992px) { #footer .header_holder .nav_holder { width: 71%; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { #footer .header_holder .nav_holder { width: 46%; float: right; display: block; } }
+
+#footer .header_holder .nav_holder .nav { padding-top: 1px; width: 76%; display: flex; justify-content: space-between; }
+@media screen and (max-width: 992px) { #footer .header_holder .nav_holder .nav { width: 75%; } }
+@media screen and (max-width: 992px) and (max-width: 767px) { #footer .header_holder .nav_holder .nav { display: none; } }
+
+#footer .header_holder .nav_holder .nav li { display: inline-block; }
+#footer .header_holder .nav_holder .nav li a:hover { background-color: transparent; color: #f31131; }
+#footer .header_holder .nav_holder .nav li a { text-transform: uppercase; font-family: "ProximaNovaRegular"; font-size: 13px; line-height: 18px; color: #ffffff; letter-spacing: 0.4px; padding: 10px 0; }
+@media screen and (max-width: 992px) { #footer .header_holder .nav_holder .nav li a { font-size: 11px; } }
+#footer .header_holder .phone_box { padding-top: 10px; letter-spacing: 0.4px; }
+@media screen and (max-width: 767px) { #footer .header_holder .phone_box { text-align: right; } }
+#footer .header_holder .phone_box a { font-family: "ProximaNovaSemibold"; font-size: 16px; line-height: 20px; color: #ffffff; }
+@media screen and (max-width: 992px) { #footer .header_holder .phone_box a { font-size: 14px; } }
+#footer .header_holder .phone_box a:hover { text-decoration: none; }

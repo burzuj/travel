@@ -1,0 +1,131 @@
+.sample_page
+	.popular_places_box
+		.popular_places_box_holder
+			max-width: 1170px
+			margin: 0 auto
+			padding-top: 20px
+			padding-bottom: 78px
+			+breakpoint($laptop)
+				padding-bottom: 45px
+				+breakpoint($tablet)
+					padding-top: 28px
+					padding-bottom: 12px
+			h2
+				margin-bottom: 60px
+				letter-spacing: 2.4px
+				+breakpoint($laptop)
+					font-size: 36px
+					line-height: 40px
+					margin-bottom: 45px
+					+breakpoint($tablet)
+						font-size: 21px
+						line-height: 25px
+						letter-spacing: 1.3px
+						margin-bottom: 24px
+			.info_box
+				display: flex
+				flex-wrap: wrap
+				.info_section
+					width: 50%
+					display: flex
+					flex-wrap: wrap
+					justify-content: space-around
+					margin-bottom: 69px
+					+breakpoint($laptop)
+						margin-bottom: 27px
+						+breakpoint($tablet)
+							width: 100%
+					.fotobox
+						padding: 0 15px
+						width: 52.9%
+						flex-direction: column
+						justify-content: center
+						height: 100%
+						+breakpoint($tablet)
+							width: 49.9%
+						.line1
+							img
+								width: 100%
+								display: block
+								+breakpoint(480px)
+									height: 159px
+									+breakpoint($mobile)
+										height: auto
+								
+						.line2
+							display: flex
+							img
+								width: 100%
+								height: 70px
+								display: block
+								
+							a
+								width: 33.33%
+					.text_box
+						padding: 13px 32px 26px 3px
+						width: 47.1%
+						+breakpoint($laptop)
+							padding: 5px 5px 5px 3px
+							+breakpoint($tablet)
+								width: 50.1%
+								padding-top: 13px
+								+breakpoint($mobile)
+									padding-top: 4px
+						h5
+							margin-bottom: 29px
+							+breakpoint($laptop)
+								margin-bottom: 10px
+								+breakpoint($tablet)
+									margin-bottom: 13px
+						p
+							margin-bottom: 29px
+							letter-spacing: 1.7px
+							line-height: 22px
+							+breakpoint($laptop)
+								margin-bottom: 15px
+								+breakpoint($tablet)
+									font-size: 13px
+									line-height: 18px
+									letter-spacing: 0.5px
+									margin-bottom: 12px
+									+breakpoint($mobile)
+										font-size: 12px
+										line-height: 16px
+							span
+								+breakpoint($tablet)
+									display: none
+									
+						a
+							font-family: 'ProximaNovaSemibold'
+							font-size: 26px
+							line-height: 30px
+							letter-spacing: 1px
+							@media only screen and (max-width: 1085px)
+								font-size: 23px
+								+breakpoint($tablet)
+									font-size: 15px
+									line-height: 19px
+									letter-spacing: 0.5px
+									+breakpoint($mobile)
+										font-size: 14px
+										line-height: 16px
+						.choice
+							color: #f31131
+							font-size: 13px
+							line-height: 17px
+							text-transform: uppercase
+							letter-spacing: 0.5px
+							+breakpoint($tablet)
+								font-size: 11px
+								letter-spacing: .3px
+								+breakpoint($mobile)
+									font-size: 10px
+							span
+								margin-left: 7px
+								position: relative
+								top: 1px
+								    
+
+
+
+

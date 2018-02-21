@@ -1,0 +1,22 @@
+{
+  "name": "starter",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Daniyil <danilvat7@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-3.2.1.min": "https://code.jquery.com/jquery-3.2.1.min.js"
+  }
+}

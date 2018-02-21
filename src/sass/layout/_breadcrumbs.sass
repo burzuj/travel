@@ -1,0 +1,19 @@
+.breadcrumbs
+	text-transform: uppercase
+	margin-bottom: 30px
+	padding: 0 15px
+	+breakpoint($laptop)
+		margin-bottom: 8px
+		+breakpoint($tablet)
+			display: none
+			
+	li
+		display: inline-block
+		font-size: 13px
+		line-height: 16px
+		font-family: 'ProximaNovaRegular'
+		margin-right: 2px
+		a
+			color: #000000
+	.active
+		color: #f31131
